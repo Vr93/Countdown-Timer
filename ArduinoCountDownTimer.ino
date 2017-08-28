@@ -100,7 +100,7 @@ void loop() {
    0 - Logo
    1 - Main Menu
    2 - Timer
-   3 - Information
+   3 - Reserved
 */
 void lcdLogic() {
   /*
@@ -121,7 +121,7 @@ void lcdLogic() {
   }
   /*
      1 - Main Menu.
-     The meny currently has two options, timer and information.
+     The meny currently has two options, timer and reserved.
      Scrollable by using the rotary encoder and activates the
      desired option by clicking the button.
   */
@@ -150,10 +150,10 @@ void lcdLogic() {
         resetEncoder(0);
       }
       /*
-         To Information Menu.
+         To reserved Menu.
       */
       if (value == 2) {
-        Serial.println("To Information Menu"); // Code Missing...
+        Serial.println("To reserved Menu"); // Code Missing... You do the rest! :D
       }
     }
   }
@@ -528,7 +528,7 @@ void showMainMenuLCD(int value) {
   display.setCursor(20, 10);
   display.print("Countdown Timer");
   display.setCursor(33, 20);
-  display.print("Information");
+  display.print("Reserved");
   switch (value) {
     case 0:
       // DO NOTHING
